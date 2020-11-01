@@ -1,38 +1,383 @@
-.App {
+html, body {
+  background: #f7f7f7;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.plan {
+  margin-top:7%;
+  padding-top: 10%;
+  margin-left: 30%;
+  width: 30%;
+  height: 440px;
+  border: 5px solid ;
+}
+.plan:before {         /* window */
+    content: "";
+    position: absolute;
+}
+.plan::after {         /* window */
+    content: "";
+    position: absolute;
+  }
+ 
+
+ div[class^="plan"]::before {
+  top: 10%;
+  left: 43%;
+  height: 30px;
+  width: 30px;
+  border-width: 2px 2px 3px 2px;
+  border-style: solid solid double solid;
+  border-color: black black black black;
+  border-radius: 32px 0 0 0;
+  -webkit-border-radius: 0 32px 0 0;
+} 
+div[class^="plan"]::after {
+    top: 10%;
+    left: 45.5%;
+    height: 30px;
+    width: 30px;
+    border-width: 2px 2px 3px 2px;
+    border-style: solid solid double solid;
+    border-color: black black black black;
+    border-radius: 32px 0 0 0;
+    -webkit-border-radius: 32px 0 0 0;
+  } 
+
+#werkstatt{
+	/* margin-top: 1%; */
+	height: 100%;
+	width: 100%;
+  cursor: pointer;
+  display: table-cell;
+    vertical-align: middle;
+    
+}
+#schweiben{
+	/* margin-top: 2%; */
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+}
+#Mikroskopie{
+	/* margin-top: 2%; */
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+}
+#Prufen{
+	/* margin-top: 2%; */
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+}
+#Optik{
+    /* margin-top: 4%; */
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+}
+
+.room {
+  position: relative;
+  border: black 5px solid; 
   text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.room:before {         /* window */
+  content: "";
+  position: absolute;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.room:after {           /* door */
+  content: "";
+  position: absolute;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/******************************************/
+/*  ROOMS                                 */
+/******************************************/
+div[class^="room"]:nth-child(2) {
+  margin-left:29.9%;
+  margin-top: -9%;
+  width: 77px;
+  height: 420px;
+  position: absolute;
+  border-left-color: black;
+  border-top-color: transparent;  
+  border-right-color: black; 
 }
 
-.App-link {
-  color: #61dafb;
+div[class^="room"]:nth-child(3) {
+  margin-left: 14%;
+  margin-top: -90px;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  border-left-color: black; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div[class^="room"]:nth-child(3):after {
+  margin-left: -170px;
+  margin-top: 168px;
+  height: 30px;
+  width: 60px;
+  border-bottom: 5px double white;
+}
+
+div[class^="room"]:nth-child(4) {
+  margin-left: 5%;
+  margin-top: -50px;
+  width: 100px; 
+  height: 150px; 
+  position: absolute; 
+  line-height: 100px;  
+}
+
+div[class^="room"]:nth-child(4):before {
+  margin-left: 100px;
+  height: 30px;
+  width: 60px;
+  margin-top: -135%;
+  border-bottom: 5px double white;
+}
+
+div[class^="room"]:nth-child(4):after {
+  margin-top: -35px;
+  margin-left: -55px;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-width: 2px 2px 3px 2px;
+  border-style: solid solid double solid;
+  border-color: black black black black;
+  -webkit-border-radius: 0 32px 0 0;
+}
+
+div[class^="room"]:nth-child(5) {
+  margin-left: 0.5%;
+  margin-top: 130px;
+  width: 185px; 
+  height: 160px; 
+  position: absolute;
+}
+
+div[class^="room"]:nth-child(6) {
+  margin-left: 16%;
+  margin-top: 125px;
+  width: 150px; 
+  height: 165px; 
+  position: absolute;  
+  border-top-color: black;
+  border-left-color: black;
+}
+
+
+@media only screen and  (max-width: 400px){
+    html, body {
+        background: #f7f7f7;
+        width: 100%;
+        height: 100%;
+      }
+    .plan {
+        margin-top:30%;
+        padding-top: 10%;
+        margin-left: 0%;
+        width: 260px;
+        height: 340px;
+        border: 5px solid ;
+    }
+    .plan:before {         /* window */
+        content: "";
+        position: absolute;
+    }
+    .plan::after {         /* window */
+        content: "";
+        position: absolute;
+    }
+    
+     div[class^="plan"]::before {
+      top: 73px;
+      left: 100px;
+      height: 30px;
+      width: 30px;
+      border-width: 2px 2px 3px 2px;
+      border-style: solid solid double solid;
+      border-color: black black black black;
+      border-radius: 32px 0 0 0;
+      -webkit-border-radius: 0 32px 0 0;
+    } 
+    div[class^="plan"]::after {
+        top: 73px;
+        left: 135px;
+        height: 30px;
+        width: 30px;
+        border-width: 2px 2px 3px 2px;
+        border-style: solid solid double solid;
+        border-color: black black black black;
+        border-radius: 32px 0 0 0;
+        -webkit-border-radius: 32px 0 0 0;
+      } 
+    
+    #werkstatt{
+        margin-top: 2%;
+        height: 95%;
+        width: 90%;
+        cursor: pointer;
+        padding-left: 0;
+    
+    }
+    #schweiben{
+        margin-top: 2%;
+        height: 95%;
+        width: 90%;
+        cursor: pointer;
+    }
+    #Mikroskopie{
+        margin-top: 2%;
+        height: 95%;
+        width: 90%;
+        cursor: pointer;
+    }
+    #Prufen{
+        margin-top: 2%;
+        height: 95%;
+        width: 90%;
+        cursor: pointer;
+    }
+    #Optik{
+        margin-top: 4%;
+        height: 90%;
+        width: 90%;
+        cursor: pointer;
+    }
+    
+    .room {
+      position: relative;
+      border: black 5px solid; 
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+    
+    .room:before {         /* window */
+      content: "";
+      position: absolute;
+    }
+    
+    .room:after {           /* door */
+      content: "";
+      position: absolute;
+    }
+
+    /******************************************/
+    /*  ROOMS                                 */
+    /******************************************/
+    div[class^="room"]:nth-child(2) {
+      margin-left: 75%;
+      margin-top: -33px;
+      width: 50px;
+      height: 370px;
+      position: absolute;
+      border-left-color: black;
+      border-top-color: transparent;  
+      border-right-color: black; 
+    }
+    
+    div[class^="room"]:nth-child(3) {
+      margin-left: 140px;
+      margin-top: -5px;
+      width: 100px;
+      height: 150px;
+      position: absolute;
+      border-left-color: black; 
+    }
+    
+    div[class^="room"]:nth-child(3):after {
+      margin-left: -80px;
+      margin-top: 120px;
+      height: 30px;
+      width: 30px;
+      border-bottom: 5px double white;
+    }
+    
+    div[class^="room"]:nth-child(4) {
+      margin-left: 50px;
+      margin-top: 20px;
+      width: 70px; 
+      height: 120px; 
+      position: absolute; 
+      line-height: 100px;  
+    }
+    
+    div[class^="room"]:nth-child(4):before {
+      margin-left: 10px;
+      height: 30px;
+      width: 30px;
+      margin-top: 90px;
+      border-bottom: 5px double white;
+    }
+    
+    div[class^="room"]:nth-child(4):after {
+      margin-top: -40px;
+      margin-left: -45px;
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      border-width: 2px 2px 3px 2px;
+      border-style: solid solid double solid;
+      border-color: black black black black;
+    }
+    
+    div[class^="room"]:nth-child(5) {
+      margin-left: 30px;
+      margin-top: 160px;
+      width: 125px; 
+      height: 160px; 
+      position: absolute;
+    }
+    
+    div[class^="room"]:nth-child(6) {
+      margin-left: 170px;
+      margin-top: 160px;
+      width: 70px; 
+      height: 165px; 
+      position: absolute;  
+      border-top-color: black;
+      border-left-color: black;
+    }
+    
+}
+#addHeading{
+  margin-top: 5%;
+  margin-left: 15%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.2em;
+
+}
+#formInfo{
+  width: 80%;
+  margin-left: 18%;
+  margin-top: 2%;
+}
+#alreadyBook{
+  margin-top: 2%;
+  margin-left: 15%;
+  padding-bottom: 2%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.2em;
+}
+#roomHeading{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 3em;
+  text-align: center;
+  margin-top: 3%;
+}
+#roomHeading::first-letter {
+  font-size: 200%;
+  color: #8A2BE2;
 }
